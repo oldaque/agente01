@@ -40,7 +40,11 @@ procure pelo computador inteiro.
   escreve o relatório nessa conversa, para ela ler quando abrir, e deixa as
   propostas de cada funcionário no `melhorias.md` dele.
 - **Com a pessoa na conversa:** ela pediu o check-up ou respondeu ao seu
-  relatório. Mostre as propostas uma por vez e aplique o que ela aprovar.
+  relatório. Mostre as propostas uma por vez e aplique o que ela aprovar. Se
+  este Claude tem a ferramenta de perguntas com opções (`AskUserQuestion`),
+  peça a decisão de cada proposta com ela: "Aprovar (recomendado)", "Agora
+  não" e "Nunca mais sugerir isso". "Agora não" mantém a proposta pendente;
+  "Nunca mais" vai para as propostas recusadas.
 
 Nos dois jeitos, consertos técnicos que não mudam o que o funcionário faz
 (reconectar um acesso que caiu, refazer um agendamento que sumiu) são com
