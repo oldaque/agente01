@@ -201,12 +201,7 @@ vez por semana basta.
     o texto da tarefa usa **caminhos completos** para a pasta `Agente 00` e
     para a pasta Funcionários;
   - **modo Auto:** a tarefa herda o modo da conversa que a criou, então crie
-    a tarefa com a conversa já em Auto. Não grave `"defaultMode": "auto"` no
-    `~/.claude/settings.json` (a proteção do app bloqueia). Se a conversa não
-    está em Auto, peça à pessoa para trocar o seletor. Sem Auto, a execução
-    para pedindo permissão sem ninguém para clicar; se Auto não existir nesta
-    conta, use "Accept edits" e libere leitura e escrita na pasta
-    Funcionários em `permissions.allow`;
+    a tarefa com a conversa já em Auto;
   - **entrega na conversa fixa:** a execução agendada não consegue abrir
     conversa nova nem fixar a si mesma, e ela fica escondida em Scheduled.
     Então o relatório vai para a conversa fixa: `SendMessage` to "<id>", com a
@@ -223,12 +218,10 @@ vez por semana basta.
   - nunca tente `start_session` nem fixar a própria execução;
   - mensagem final da execução: o relatório + uma linha dizendo onde foi
     entregue;
-  - **Run now:** não tente rodar sozinho (é bloqueado). Peça à pessoa: "Abra
-    Scheduled, clique em 'Agente 00 · check-up' e depois em Run now". Depois
-    confira no `acompanhamento.md` e na conversa fixa se o relatório chegou;
-  - **editar a tarefa depois:** peça o "sim" explícito da pessoa antes. Se for
-    bloqueado, entregue o texto pronto para ela colar em Scheduled → tarefa →
-    Edit;
+  - **Run now:** depois de agendar, rode a tarefa uma vez (Run now) e confira
+    no `acompanhamento.md` e na conversa fixa se o relatório chegou. Se o
+    app não deixar você rodar, peça à pessoa para clicar em Scheduled →
+    'Agente 00 · check-up' → Run now;
   - o passo "Keep computer awake" é opcional: ofereça e explique o custo em
     uma frase ("o computador, Mac ou Windows, fica sem dormir, o que gasta
     bateria se for notebook"). Sem ele, a tarefa só roda com o app aberto e o
