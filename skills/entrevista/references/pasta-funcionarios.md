@@ -174,8 +174,20 @@ vez por semana basta.
 
 - **Se este Claude consegue agendar tarefas** (as tarefas agendadas do
   próprio app): agende você uma tarefa recorrente, na frequência combinada,
-  que abre uma conversa nova no projeto do Agente 00 e faz o check-up com a
-  skill `agente-00`. Prefira sempre o agendador do Claude ao do computador.
+  que abre uma conversa nova e faz o check-up com a skill `agente-00`.
+  Prefira sempre o agendador do Claude ao do computador. Ao criar a tarefa:
+  - defina a pasta de trabalho como a pasta `Agente 00`;
+  - o relatório vai para `Agente 00/ultimo-checkup.md`, com a data e a hora
+    dentro, e a primeira conversa da pessoa no projeto o apresenta (a tarefa
+    agendada aparece no histórico e no grupo "Scheduled", não como conversa
+    dentro do projeto);
+  - o passo "Keep computer awake" é opcional: ofereça e explique o custo em
+    uma frase ("o Mac fica sem dormir, o que gasta bateria se for
+    notebook"). Sem ele, a tarefa só roda com o app aberto e o Mac acordado;
+  - diga à pessoa, de forma visível e sem jargão: "Todo dia o check-up roda
+    sozinho. Você vê o histórico em Scheduled, e o resumo também aparece aqui
+    no projeto. Se o Mac estiver fechado na hora, ele pode atrasar ou pular."
+    (troque "todo dia" pela frequência escolhida).
 - **Se o app não tem agendador, mas o computador tem** e roda o Claude sem
   ninguém na frente: use o do computador, com o Claude só com as permissões
   de que o check-up precisa, e diga à pessoa em uma frase que ficou assim e
