@@ -182,12 +182,16 @@ vez por semana basta.
     agendada aparece no histórico e no grupo "Scheduled", não como conversa
     dentro do projeto);
   - o passo "Keep computer awake" é opcional: ofereça e explique o custo em
-    uma frase ("o Mac fica sem dormir, o que gasta bateria se for
-    notebook"). Sem ele, a tarefa só roda com o app aberto e o Mac acordado;
+    uma frase ("o computador, Mac ou Windows, fica sem dormir, o que gasta
+    bateria se for notebook"). Sem ele, a tarefa só roda com o app aberto e o
+    computador acordado;
   - diga à pessoa, de forma visível e sem jargão: "Todo dia o check-up roda
     sozinho. Você vê o histórico em Scheduled, e o resumo também aparece aqui
-    no projeto. Se o Mac estiver fechado na hora, ele pode atrasar ou pular."
-    (troque "todo dia" pela frequência escolhida).
+    no projeto. Se o computador estiver fechado na hora, ele pode atrasar ou pular."
+    (troque "todo dia" pela frequência escolhida). Vale igual em Mac e
+    Windows: não use `~`, `bash` nem atalhos de um sistema só; escreva os
+    arquivos com as ferramentas do Claude, com caminhos relativos à pasta
+    `Agente 00`.
 - **Se o app não tem agendador, mas o computador tem** e roda o Claude sem
   ninguém na frente: use o do computador, com o Claude só com as permissões
   de que o check-up precisa, e diga à pessoa em uma frase que ficou assim e
