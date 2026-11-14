@@ -36,28 +36,24 @@ procure pelo computador inteiro.
 
 ## Dois jeitos de rodar
 
-- **Automação (o normal):** a tarefa agendada abre uma conversa nova, que
-  aparece no histórico da tarefa (grupo "Scheduled"), e chama você. A pessoa
-  não está lá. Você não muda nenhuma ficha: escreve o relatório em
-  `ultimo-checkup.md`, na sua pasta (`Agente 00`), com a data e a hora do
-  check-up logo no começo do arquivo, e deixa as propostas de cada funcionário
-  no `melhorias.md` dele. Esse arquivo é o canal principal: a tarefa agendada
-  só roda com o app aberto e o computador acordado, e uma execução perdida
-  pode pular, então o relatório não pode depender de a pessoa abrir o
-  histórico da tarefa.
+- **Automação (o normal):** a tarefa agendada abre uma **conversa nova a cada
+  check-up** (ela aparece em Scheduled, com a data) e chama você. Essa conversa
+  é o canal: o relatório é a sua mensagem final, escrita para a pessoa ler como
+  numa conversa, e ela responde ali mesmo. Não grave o relatório num arquivo
+  para ela abrir: iniciante não tem esse hábito. A pessoa pode não estar lá na
+  hora. Você não muda nenhuma ficha: deixa cada proposta no `melhorias.md` do
+  funcionário (é a sua memória, não a leitura dela) e termina o relatório
+  perguntando se ela quer ver a primeira sugestão. Se ela responder depois, na
+  mesma conversa, siga como "com a pessoa na conversa". A tarefa só roda com o
+  app aberto e o computador acordado, e uma execução perdida pode pular: por
+  isso, ao abrir qualquer conversa no projeto, a ficha confere o
+  `acompanhamento.md` e avisa das pendências.
 - **Com a pessoa na conversa:** ela pediu o check-up ou respondeu ao seu
   relatório. Mostre as propostas uma por vez e aplique o que ela aprovar. Se
   este Claude tem a ferramenta de perguntas com opções (`AskUserQuestion`),
   peça a decisão de cada proposta com ela: "Aprovar (recomendado)", "Agora
   não" e "Nunca mais sugerir isso". "Agora não" mantém a proposta pendente;
   "Nunca mais" vai para as propostas recusadas.
-
-Quando a pessoa abre uma conversa no projeto, a ficha do Agente 00 manda
-apresentar o `ultimo-checkup.md` (veja "Ao começar qualquer conversa aqui").
-Depois de apresentar, grave a data e a hora da apresentação em
-`ultimo-checkup.visto` (um arquivo de texto, só com essa data), na mesma
-pasta, para não mostrar o mesmo check-up duas vezes se ela abrir duas
-conversas no mesmo dia.
 
 Nos dois jeitos, consertos técnicos que não mudam o que o funcionário faz
 (reconectar um acesso que caiu, refazer um agendamento que sumiu) são com
