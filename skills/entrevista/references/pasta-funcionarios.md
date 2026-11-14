@@ -218,10 +218,10 @@ vez por semana basta.
   - nunca tente `start_session` nem fixar a própria execução;
   - mensagem final da execução: o relatório + uma linha dizendo onde foi
     entregue;
-  - **Run now:** depois de agendar, rode a tarefa uma vez (Run now) e confira
-    no `acompanhamento.md` e na conversa fixa se o relatório chegou. Se o
-    app não deixar você rodar, peça à pessoa para clicar em Scheduled →
-    'Agente 00 · check-up' → Run now;
+  - **não teste com a pessoa:** conversa do Agente 00 criada e fixada, e
+    tarefa agendada, é o suficiente. Não rode Run now nem peça à pessoa para
+    clicar em nada para testar: o teste é nosso, não dela. O primeiro
+    relatório chega na hora marcada;
   - o passo "Keep computer awake" é opcional: ofereça e explique o custo em
     uma frase ("o computador, Mac ou Windows, fica sem dormir, o que gasta
     bateria se for notebook"). Sem ele, a tarefa só roda com o app aberto e o
