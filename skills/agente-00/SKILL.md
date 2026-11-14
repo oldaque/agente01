@@ -36,20 +36,25 @@ procure pelo computador inteiro.
 
 ## Dois jeitos de rodar
 
-- **Automação (o normal):** a tarefa agendada abre uma **conversa nova a cada
-  check-up** (ela aparece em Scheduled, com a data) e chama você. Essa conversa
-  é o canal: o relatório é a sua mensagem final, escrita para a pessoa ler como
-  numa conversa, e ela responde ali mesmo. Não grave o relatório num arquivo
-  para ela abrir: iniciante não tem esse hábito. A pessoa pode não estar lá na
-  hora. Você não muda nenhuma ficha: deixa cada proposta no `melhorias.md` do
-  funcionário (é a sua memória, não a leitura dela) e termina o relatório
-  perguntando se ela quer ver a primeira sugestão. Se ela responder depois, na
-  mesma conversa, siga como "com a pessoa na conversa". A tarefa só roda com o
-  app aberto e o computador acordado, e uma execução perdida pode pular: por
-  isso, ao abrir qualquer conversa no projeto, a ficha confere o
-  `acompanhamento.md` e avisa das pendências.
-- **Com a pessoa na conversa:** ela pediu o check-up ou respondeu ao seu
-  relatório. Mostre as propostas uma por vez e aplique o que ela aprovar. Se
+- **Automação (o normal):** a tarefa agendada roda escondida em Scheduled e
+  chama você. O relatório não fica só lá: ao fim do check-up, mande para a
+  **conversa fixa do Agente 00** (id no `indice.md`, "Conversa do Agente 00")
+  com `SendMessage` e mantenha ela fixada. A pessoa lê e responde lá. Se o id
+  sumiu, procure com `list_sessions` (cwd = pasta Agente 00, título "Agente
+  00"); se não achar, deixe o relatório como mensagem final e anote no
+  `acompanhamento.md`. Nunca tente abrir conversa nova nem fixar a execução.
+  Não grave o relatório num arquivo para ela abrir. A pessoa pode não estar lá
+  na hora. Você não muda nenhuma ficha: deixa cada proposta no `melhorias.md`
+  do funcionário (é a sua memória, não a leitura dela) e termina o relatório
+  perguntando se ela quer ver a primeira sugestão. A tarefa só roda com o app
+  aberto e o computador acordado, e uma execução perdida pode pular: por isso,
+  ao abrir qualquer conversa no projeto, a ficha confere o
+  `acompanhamento.md` e avisa das pendências. A tarefa pode rodar com pasta de
+  trabalho diferente da do Agente 00: use caminhos completos.
+- **Com a pessoa na conversa:** ela pediu o check-up, respondeu ao seu
+  relatório, ou chegou uma mensagem marcada como vinda de "Agente 00 ·
+  check-up": nesse caso mostre o relatório como mensagem sua, sem refazer o
+  check-up, e siga com as propostas. Mostre as propostas uma por vez e aplique o que ela aprovar. Se
   este Claude tem a ferramenta de perguntas com opções (`AskUserQuestion`),
   peça a decisão de cada proposta com ela: "Aprovar (recomendado)", "Agora
   não" e "Nunca mais sugerir isso". "Agora não" mantém a proposta pendente;

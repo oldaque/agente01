@@ -165,6 +165,16 @@ próprio:
 4. Ative a guarda de versões na pasta do Agente 00, se o preparo do
    computador foi feito.
 
+5. **Abra a conversa fixa do Agente 00, ANTES de agendar:**
+   - `start_session` com `cwd` = caminho completo da pasta `Agente 00`,
+     `use_worktree` false, título "Agente 00", prompt "Olá";
+   - guarde o id da sessão (`local_...`) e fixe a conversa
+     (`set_pinned` com o id, true);
+   - anote o id no `indice.md` ("Conversa do Agente 00: local_...") e no
+     `acompanhamento.md`;
+   - confira que ela responde pela ficha (nome da pessoa, frequência do
+     check-up).
+
 O Agente 00 não contrata. Se a pessoa pedir a ele um funcionário novo, ele
 explica que quem contrata é a skill do Agente 01, com a pasta Funcionários
 aberta, e ajuda a abrir.
@@ -183,33 +193,51 @@ vez por semana basta.
 **Automação.**
 
 - **Se este Claude consegue agendar tarefas** (as tarefas agendadas do
-  próprio app): agende você uma tarefa recorrente, na frequência combinada,
-  que abre uma conversa nova e faz o check-up com a skill `agente-00`.
+  próprio app): agende uma tarefa recorrente "Agente 00 · check-up", na
+  frequência combinada, **depois** de abrir a conversa fixa (passo 5 acima).
   Prefira sempre o agendador do Claude ao do computador. Ao criar a tarefa:
-  - defina a pasta de trabalho como a pasta `Agente 00`;
-  - **modo de permissão Auto** na tarefa (na caixa de instruções, ao criar, ou
-    em Edit). Sem isso a conversa da tarefa abre em Manual e para pedindo
-    permissão, sem ninguém para clicar. Se Auto não estiver disponível para
-    esta conta, use "Accept edits" e, no `Agente 00/.claude/settings.json`,
-    libere leitura e escrita na pasta Funcionários e leitura da pasta de
-    skills (`permissions.allow`);
-  - cada check-up é uma **conversa nova** na tarefa (isso o app já faz). O
-    relatório é a mensagem final dessa conversa, e a pessoa responde nela.
-    Não crie arquivo de relatório para ela abrir: iniciante não tem esse
-    hábito. Ao fim do onboarding, rode a tarefa uma vez agora (Run now) para
-    ela ver como é, e diga onde achar: Scheduled, na tarefa "Agente 00 ·
-    check-up";
+  - `create_scheduled_task` não aceita pasta de trabalho: a tarefa roda na
+    pasta da conversa que a criou (a Funcionários, não a Agente 00). Por isso
+    o texto da tarefa usa **caminhos completos** para a pasta `Agente 00` e
+    para a pasta Funcionários;
+  - **modo Auto:** a tarefa herda o modo da conversa que a criou, então crie
+    a tarefa com a conversa já em Auto. Não grave `"defaultMode": "auto"` no
+    `~/.claude/settings.json` (a proteção do app bloqueia). Se a conversa não
+    está em Auto, peça à pessoa para trocar o seletor. Sem Auto, a execução
+    para pedindo permissão sem ninguém para clicar; se Auto não existir nesta
+    conta, use "Accept edits" e libere leitura e escrita na pasta
+    Funcionários em `permissions.allow`;
+  - **entrega na conversa fixa:** a execução agendada não consegue abrir
+    conversa nova nem fixar a si mesma, e ela fica escondida em Scheduled.
+    Então o relatório vai para a conversa fixa: `SendMessage` to "<id>", com a
+    mensagem "Check-up de {data} feito e anotado no acompanhamento.md. Mostre
+    a {Nome} o relatório abaixo, como sua mensagem, sem refazer o check-up, e
+    espere a resposta. Se quiser ver as sugestões, siga a ficha e a skill
+    agente-00 (com a pessoa na conversa)." + o relatório;
+  - depois, `set_pinned` com o id, true (a conversa continua fixada);
+  - se o id não existir mais (a pessoa arquivou): procure com `list_sessions`
+    uma conversa com cwd = pasta Agente 00 e título "Agente 00"; se não
+    achar, deixe o relatório como mensagem final da execução e anote no
+    `acompanhamento.md` que a conversa fixa sumiu (a ficha avisa na próxima
+    abertura do projeto);
+  - nunca tente `start_session` nem fixar a própria execução;
+  - mensagem final da execução: o relatório + uma linha dizendo onde foi
+    entregue;
+  - **Run now:** não tente rodar sozinho (é bloqueado). Peça à pessoa: "Abra
+    Scheduled, clique em 'Agente 00 · check-up' e depois em Run now". Depois
+    confira no `acompanhamento.md` e na conversa fixa se o relatório chegou;
+  - **editar a tarefa depois:** peça o "sim" explícito da pessoa antes. Se for
+    bloqueado, entregue o texto pronto para ela colar em Scheduled → tarefa →
+    Edit;
   - o passo "Keep computer awake" é opcional: ofereça e explique o custo em
     uma frase ("o computador, Mac ou Windows, fica sem dormir, o que gasta
     bateria se for notebook"). Sem ele, a tarefa só roda com o app aberto e o
     computador acordado;
-  - diga à pessoa, de forma visível e sem jargão: "Todo dia o check-up roda
-    sozinho. Cada check-up abre uma conversa nova em Scheduled, e é lá
-    que você lê e responde. Se o computador estiver fechado na hora, ele pode atrasar ou pular."
-    (troque "todo dia" pela frequência escolhida). Vale igual em Mac e
-    Windows: não use `~`, `bash` nem atalhos de um sistema só; escreva os
-    arquivos com as ferramentas do Claude, com caminhos relativos à pasta
-    `Agente 00`.
+  - diga à pessoa, de forma visível e sem jargão: "Toda {frequência} o
+    relatório chega na conversa do Agente 00, fixada no topo da barra
+    lateral. É lá que você lê e responde. Se o computador estiver fechado na
+    hora, ele pode atrasar ou pular." Vale igual em Mac e Windows: não use
+    `~`, `bash` nem atalhos de um sistema só.
 - **Se o app não tem agendador, mas o computador tem** e roda o Claude sem
   ninguém na frente: use o do computador, com o Claude só com as permissões
   de que o check-up precisa, e diga à pessoa em uma frase que ficou assim e
