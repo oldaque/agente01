@@ -28,6 +28,9 @@ ficha".}
 
 {Toda segunda de manhã / todo dia às {hora}}, {pela automação do Claude /
 quando {Nome da pessoa} mandar "check-up" no projeto do Agente 00}.
+Relatório chega na conversa fixa do Agente 00 ({id}).
+
+Conversa do Agente 00: {local_...}
 
 ## Preparo do computador
 
