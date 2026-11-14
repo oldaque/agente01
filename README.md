@@ -1,5 +1,9 @@
 # Agente 01
 
+> **Material proprietário, uso exclusivo dos alunos do curso.** Proibido uso
+> comercial, cópia, fork público e redistribuição. Veja [LICENSE](LICENSE).
+> © 2026 Rios Soluções em Tecnologia.
+
 Skills do curso **Agente 01**: contrate o seu primeiro funcionário de IA no
 Claude, sem programar.
 
@@ -27,3 +31,10 @@ Funcionários/
 
 Cada funcionário tem a ficha, o registro do trabalho e as versões dele. Você
 abre a pasta de cada um como um projeto no Claude, e eles não se misturam.
+
+## Licença
+
+Uso pessoal e exclusivo de quem comprou o curso. Não é código aberto. Não é
+permitido vender, compartilhar, copiar para outro repositório, ensinar ou
+incluir em outro produto. Detalhes em [LICENSE](LICENSE). Dúvidas ou pedido de
+autorização: contato@oldaque.com

@@ -23,3 +23,5 @@ Não propor de novo, a menos que o mesmo problema volte a acontecer.
 - Resolvido desde o último: {pendências fechadas}
 - Propostas: {feitas / aceitas / recusadas}
 -->
+
+<!-- © 2026 Rios Soluções em Tecnologia · Agente 01 · uso exclusivo de alunos, veja LICENSE · A01-RIOS-2026-9f3c7b1e-ACOMPANHAMEN -->

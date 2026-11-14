@@ -39,3 +39,5 @@ funcionários, feito com a skill `agente-00`.
 - Nada que não tem volta: nada apagado, enviado, publicado ou pago.
 - As versões ficam só neste computador. Nunca envie nada para um serviço
   online.
+
+<!-- © 2026 Rios Soluções em Tecnologia · Agente 01 · uso exclusivo de alunos, veja LICENSE · A01-RIOS-2026-9f3c7b1e-AGENTE00MODE -->

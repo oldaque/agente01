@@ -185,3 +185,5 @@ vez por semana basta.
   check-up quando ele atrasa.
 
 Até 2 tentativas para agendar. Anote no índice a frequência e o jeito.
+
+<!-- © 2026 Rios Soluções em Tecnologia · Agente 01 · uso exclusivo de alunos, veja LICENSE · A01-RIOS-2026-9f3c7b1e-PASTAFUNCION -->

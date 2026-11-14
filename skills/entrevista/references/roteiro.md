@@ -228,3 +228,5 @@ confira" da ficha: o funcionário confere sozinho antes de entregar.
 Siga a Parte 2 do `SKILL.md`: pasta do funcionário
 (`pasta-funcionarios.md`), setup das ferramentas (`setup.md`), ficha, salvar
 e abrir o projeto do funcionário.
+
+<!-- © 2026 Rios Soluções em Tecnologia · Agente 01 · uso exclusivo de alunos, veja LICENSE · A01-RIOS-2026-9f3c7b1e-ROTEIRO -->

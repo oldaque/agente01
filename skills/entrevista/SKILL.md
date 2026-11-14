@@ -2,6 +2,7 @@
 name: entrevista
 description: Skill do Agente 01. Contrata um funcionário de IA para a pessoa. Encontra (ou cria) a pasta Funcionários e, no primeiro, faz o onboarding (preparo do computador e o Agente 00, o gerente que acompanha os funcionários). Entrevista a pessoa sobre um trabalho que ela repete toda semana, prepara sozinha as conexões e os acessos e cria o funcionário como um projeto próprio, com pasta, ficha (AGENTS.md) e versões só dele. Use quando a pessoa quiser contratar, criar ou montar um funcionário de IA (o primeiro ou mais um), montar a ficha do funcionário, ensinar o Claude a fazer uma tarefa do jeito dela, ou fazer as aulas 03 (Ensine) e 06 (Contrate o segundo) do Agente 01.
 ---
+<!-- © 2026 Rios Soluções em Tecnologia · Agente 01 · uso exclusivo de alunos, veja LICENSE · A01-RIOS-2026-9f3c7b1e-SKILL -->
 
 # Entrevista do funcionário
 

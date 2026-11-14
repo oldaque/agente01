@@ -36,3 +36,5 @@ quando {Nome da pessoa} mandar "check-up" no projeto do Agente 00}.
 - Cada funcionário guarda as próprias versões, só neste computador. Nunca
   envie nenhuma pasta daqui para um serviço online, e nunca guarde arquivos de
   chave de acesso nas versões.
+
+<!-- © 2026 Rios Soluções em Tecnologia · Agente 01 · uso exclusivo de alunos, veja LICENSE · A01-RIOS-2026-9f3c7b1e-INDICEMODELO -->

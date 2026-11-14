@@ -2,6 +2,7 @@
 name: agente-00
 description: Skill do Agente 01. Check-up do Agente 00, o gerente que acompanha os funcionários de IA da pasta Funcionários. Olha todos os funcionários, lê as conversas e os registros dos últimos dias, confere se o que foi apontado antes já foi corrigido, testa acessos, rotinas e agendamentos e propõe até 3 melhorias por funcionário, que só entram com a aprovação da pessoa. Use quando a automação do Agente 00 rodar, quando a pessoa pedir "check-up", "revisão da semana" ou perguntar como estão os funcionários dela, ou quando a ficha do Agente 00 pedir.
 ---
+<!-- © 2026 Rios Soluções em Tecnologia · Agente 01 · uso exclusivo de alunos, veja LICENSE · A01-RIOS-2026-9f3c7b1e-SKILL -->
 
 # Agente 00 · check-up dos funcionários
 

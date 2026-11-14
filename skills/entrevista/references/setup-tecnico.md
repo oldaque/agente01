@@ -75,3 +75,5 @@ Isto já vai escrito na ficha, para o funcionário seguir no dia a dia:
 - Programa novo ou alterado é melhoria: só com aprovação, como qualquer
   mudança na ficha.
 - O programa só mexe nos lugares e acessos que a ficha já autoriza.
+
+<!-- © 2026 Rios Soluções em Tecnologia · Agente 01 · uso exclusivo de alunos, veja LICENSE · A01-RIOS-2026-9f3c7b1e-SETUPTECNICO -->
