@@ -23,9 +23,12 @@ no `indice.md`.
 ## 2. Fazer sozinho
 
 1. Descubra o sistema do computador (Mac, Windows, Linux).
-2. Veja o que já está instalado. O que já existe e funciona não se reinstala.
+2. Veja o que já está instalado, com comandos que existam no sistema dela
+   (no Windows o Python pode ser `python` ou `py`; no Mac e no Linux,
+   `python3`: teste antes de dizer que falta). O que já existe e funciona não se reinstala.
 3. Instale o que falta pelo caminho oficial do sistema ou do próprio
-   programa. Nada de instalador de site desconhecido.
+   programa (Windows: `winget` ou o instalador oficial; Mac: Homebrew ou o
+   instalador oficial). Nada de instalador de site desconhecido.
 4. Confira que cada um funciona antes de seguir.
 
 Se o computador pedir a senha da pessoa ou um clique de permissão, diga

@@ -18,7 +18,7 @@ Abra o app do Claude no computador, vá na aba **Code**, abra a sua pasta
 **Funcionários** e cole a mensagem que está na descrição da aula 03.
 
 O Claude baixa este repositório e copia as duas skills para a sua pasta de
-skills (`~/.claude/skills/`), para valerem em qualquer projeto.
+skills (a pasta `.claude/skills` dentro da sua pasta de usuário, no Mac e no Windows), para valerem em qualquer projeto.
 
 ## Como fica a sua pasta Funcionários
 
