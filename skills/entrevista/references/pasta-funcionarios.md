@@ -74,6 +74,9 @@ Sem `indice.md`, é o primeiro funcionário. Antes da entrevista:
    > acompanha os seus funcionários e sugere melhorias. Eu cuido de tudo. Se
    > o computador pedir a sua senha, eu te aviso antes. Posso seguir?
 
+   Faça o "Posso seguir?" com opções: "Pode seguir (recomendado)" e "Sem
+   preparar o computador".
+
    Se ela recusar o preparo do computador, faça o resto sem ele. A pasta
    Funcionários e o Agente 00 não são opcionais: sem eles, ninguém acompanha
    os funcionários.
@@ -161,6 +164,8 @@ aberta, e ajuda a abrir.
 > O Agente 00 vai dar uma olhada nos seus funcionários e te contar o que
 > observou. Eu deixaria uma vez por semana, na segunda de manhã, antes de a
 > semana começar. Se preferir, pode ser todo dia. Pode ser segunda?
+
+Com opções: "Segunda de manhã (recomendado)" e "Todo dia de manhã".
 
 Recomende semanal: cada check-up gasta uso do plano do Claude, e no começo uma
 vez por semana basta.

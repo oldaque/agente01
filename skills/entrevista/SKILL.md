@@ -53,6 +53,10 @@ tudo pela conversa; o que a pessoa disser vale mais que qualquer suposição sua
   (formato, tom, nome, o que ele faz sozinho), diga o que você recomenda e por
   quê, de um jeito que um "sim" já aceite: "Eu deixaria ele só preparar e você
   aprovar antes de enviar, para nada sair sem você ver. Pode ser assim?".
+- **Decisão vira botão.** Se este Claude tem a ferramenta de perguntas com
+  opções (`AskUserQuestion`), use-a em toda pergunta de decisão e de
+  confirmação, para a pessoa responder com um clique. Veja "Perguntas com
+  opções", abaixo. Pergunta de descrição continua na conversa, por escrito.
 - Quando o motivo de uma pergunta não for óbvio, diga em meia frase para que
   ela serve.
 - Se a resposta vier vaga, aprofunde com uma pergunta curta antes de passar
@@ -82,6 +86,30 @@ tudo pela conversa; o que a pessoa disser vale mais que qualquer suposição sua
   partir do que ela já contou, e deixe ela escolher.
 - Mostre o progresso de vez em quando ("Já entendi onde você trabalha. Agora,
   o passo a passo.").
+
+## Perguntas com opções
+
+Use a ferramenta de perguntas com opções sempre que a resposta cabe em
+escolhas: aprovações ("Posso seguir?"), a frequência do Agente 00, o nome do
+funcionário, formato, tamanho e tom, o que ele faz sozinho ou com aprovação,
+a confirmação de cada resumo de bloco, o exemplo de resultado e a ficha.
+
+- **Uma pergunta por chamada**, como na conversa.
+- **De 2 a 4 opções**, com rótulo curto (1 a 5 palavras) e uma descrição de
+  uma frase em linguagem simples. A sua recomendação vem primeiro, com
+  "(recomendado)" no rótulo.
+- A ferramenta já oferece "Outro" para a pessoa escrever. Não crie essa opção.
+- Antes da pergunta, o texto da conversa traz o que a pessoa precisa ver para
+  decidir (o resumo do bloco, o exemplo, a ficha). A pergunta só decide.
+- Confirmação de resumo: opções como "Está certo" e "Quero corrigir". Se ela
+  escolher corrigir, pergunte por escrito o que muda.
+- Nome: duas ou três sugestões variadas; "Outro" serve para o nome dela.
+- Pergunta de descrição (como ela faz, onde acontece, o que olha para
+  conferir) nunca vira opção: a pessoa conta com as palavras dela. Só ofereça
+  opções se ela travar.
+
+Se a ferramenta não existir neste Claude, faça a mesma pergunta por escrito,
+com as opções numeradas e a sua recomendação primeiro.
 
 ## Freios
 

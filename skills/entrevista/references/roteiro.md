@@ -12,6 +12,10 @@ Pule o que já foi respondido e os galhos que não existem no trabalho dela. Ao
 fim de cada bloco, devolva em poucas linhas o que entendeu, separando o que
 ela disse do que você deduziu, e pergunte o que está errado ou faltando.
 
+Perguntas marcadas com **[opções]** são de decisão: faça com a ferramenta de
+perguntas com opções, como manda o `SKILL.md`. As outras são de descrição e
+ficam por escrito.
+
 ## Abertura
 
 Diga, em duas linhas, algo como:
@@ -39,7 +43,7 @@ do `SKILL.md`.
 
 1. Que trabalho ele vai assumir?
 2. Para quem vai o resultado? Você, um cliente, sua equipe, outra pessoa?
-3. Que nome você quer dar a ele?
+3. Que nome você quer dar a ele? **[opções]**
 
 **Tirar:** a função em uma frase, o destinatário, o nome. Se a pessoa não
 quiser escolher nome, sugira dois ou três nomes simples de pessoa, variados e
@@ -146,8 +150,9 @@ Ainda não faça setup. Ele vem depois da entrevista, seguindo `setup.md`.
 **Perguntas** (cada uma já com a sua sugestão, a partir do que ela contou):
 
 1. Formato: "Pelo que você contou, eu entregaria em [formato]. Pode ser?"
-2. Tamanho: "Eu deixaria com [tamanho]. Está bom?"
-3. Tom: "Eu usaria um tom [tom], como o seu. Combina?"
+   **[opções]**
+2. Tamanho: "Eu deixaria com [tamanho]. Está bom?" **[opções]**
+3. Tom: "Eu usaria um tom [tom], como o seu. Combina?" **[opções]**
 
 Depois, **proponha um exemplo** de resultado bom, montado com tudo o que ela
 contou, usando dados inventados (nada de cliente real). Apresente assim:
@@ -174,8 +179,9 @@ sabe a resposta. Leve a sua sugestão junto.
 **Perguntas:**
 
 1. O que ele pode fazer sozinho, sem te perguntar? Sugira a partir dos passos
-   que não mudam nada fora da pasta dele.
+   que não mudam nada fora da pasta dele. **[opções]**
 2. O que ele só faz com a sua aprovação? Sugira as ações que não têm volta.
+   **[opções]**
 3. O que seria pior do que ele não fazer nada? (Isso mostra o que ele nunca
    pode fazer.)
 4. Tem algum dado que não pode entrar no Claude?
