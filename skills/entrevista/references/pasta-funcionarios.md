@@ -64,6 +64,16 @@ não têm a ver: não use como pasta Funcionários. Proponha Documentos.
 
 Sem `indice.md`, é o primeiro funcionário. Antes da entrevista:
 
+0. **Modo Auto, antes de tudo.** Sem ele o Claude pede permissão a cada arquivo
+   e a cada passo, e iniciante desiste. Se a conversa não está em Auto (o
+   seletor de modo fica embaixo da caixa de texto, hoje "Manual" ou "Accept
+   edits"), peça uma vez: "Troque o modo aqui embaixo para Auto. Assim eu
+   trabalho sem te pedir permissão a cada passo, e ainda paro nas coisas
+   arriscadas." Se Auto não aparecer, use "Accept edits" e siga. Com o preparo
+   do computador aprovado, deixe Auto como padrão: no `settings.json` da pasta
+   de usuário do Claude (`.claude/settings.json`, no Mac e no Windows), junte
+   `"permissions": {"defaultMode": "auto"}` sem apagar nada que já exista
+   (esse valor só vale ali; no `settings.json` do projeto o Claude ignora).
 1. **Pedir uma aprovação só para o onboarding inteiro.** Diga algo como:
 
    > Antes de contratar o seu primeiro funcionário, vou preparar a casa. Vou
@@ -177,17 +187,25 @@ vez por semana basta.
   que abre uma conversa nova e faz o check-up com a skill `agente-00`.
   Prefira sempre o agendador do Claude ao do computador. Ao criar a tarefa:
   - defina a pasta de trabalho como a pasta `Agente 00`;
-  - o relatório vai para `Agente 00/ultimo-checkup.md`, com a data e a hora
-    dentro, e a primeira conversa da pessoa no projeto o apresenta (a tarefa
-    agendada aparece no histórico e no grupo "Scheduled", não como conversa
-    dentro do projeto);
+  - **modo de permissão Auto** na tarefa (na caixa de instruções, ao criar, ou
+    em Edit). Sem isso a conversa da tarefa abre em Manual e para pedindo
+    permissão, sem ninguém para clicar. Se Auto não estiver disponível para
+    esta conta, use "Accept edits" e, no `Agente 00/.claude/settings.json`,
+    libere leitura e escrita na pasta Funcionários e leitura da pasta de
+    skills (`permissions.allow`);
+  - cada check-up é uma **conversa nova** na tarefa (isso o app já faz). O
+    relatório é a mensagem final dessa conversa, e a pessoa responde nela.
+    Não crie arquivo de relatório para ela abrir: iniciante não tem esse
+    hábito. Ao fim do onboarding, rode a tarefa uma vez agora (Run now) para
+    ela ver como é, e diga onde achar: Scheduled, na tarefa "Agente 00 ·
+    check-up";
   - o passo "Keep computer awake" é opcional: ofereça e explique o custo em
     uma frase ("o computador, Mac ou Windows, fica sem dormir, o que gasta
     bateria se for notebook"). Sem ele, a tarefa só roda com o app aberto e o
     computador acordado;
   - diga à pessoa, de forma visível e sem jargão: "Todo dia o check-up roda
-    sozinho. Você vê o histórico em Scheduled, e o resumo também aparece aqui
-    no projeto. Se o computador estiver fechado na hora, ele pode atrasar ou pular."
+    sozinho. Cada check-up abre uma conversa nova em Scheduled, e é lá
+    que você lê e responde. Se o computador estiver fechado na hora, ele pode atrasar ou pular."
     (troque "todo dia" pela frequência escolhida). Vale igual em Mac e
     Windows: não use `~`, `bash` nem atalhos de um sistema só; escreva os
     arquivos com as ferramentas do Claude, com caminhos relativos à pasta
