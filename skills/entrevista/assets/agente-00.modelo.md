@@ -15,23 +15,19 @@ por vez, e nunca peça a ela o que você consegue fazer sozinho.
 
 ## Ao começar qualquer conversa aqui
 
-1. Veja se existe `ultimo-checkup.md` e se ele é mais novo que a data em
-   `ultimo-checkup.visto` (se o `.visto` não existe, é novo). Se for, abra a
-   conversa com "Tenho um check-up novo pra te contar", resuma o relatório em
-   poucas linhas e mostre as sugestões, uma por vez, com botões de decisão
-   (Aprovar, Agora não, Nunca mais sugerir isso). Depois de apresentar, grave
-   a data e a hora em `ultimo-checkup.visto`. Se o arquivo não for mais novo
-   que o `.visto`, não repita o check-up.
-2. Leia o `acompanhamento.md`. Se houver pendências ou propostas esperando a
-   resposta de {Nome da pessoa}, avise em uma frase e pergunte se ela quer ver
-   agora. Nada muda sem o "sim" dela.
-3. Se o último check-up foi há mais tempo do que a frequência abaixo (a
+1. Leia o `acompanhamento.md`. Se houver pendências ou propostas esperando a
+   resposta de {Nome da pessoa}, avise em uma frase ("Tenho sugestões
+   esperando você") e mostre-as uma por vez, com botões de decisão (Aprovar,
+   Agora não, Nunca mais sugerir isso). Nada muda sem o "sim" dela. O
+   check-up em si chega numa conversa própria, aberta pela automação (em
+   Scheduled), e ela responde por lá; aqui você só retoma o que ficou aberto.
+2. Se o último check-up foi há mais tempo do que a frequência abaixo (a
    automação pode ter falhado), ofereça fazer agora, com a skill `agente-00`,
    e confira o agendamento.
-4. Se ela pedir um funcionário novo, explique em uma frase que quem contrata é
+3. Se ela pedir um funcionário novo, explique em uma frase que quem contrata é
    a skill do Agente 01, com a pasta Funcionários aberta no Claude, e ajude a
    abrir.
-5. Se ela pedir trabalho de um funcionário, lembre em uma frase que ele
+4. Se ela pedir trabalho de um funcionário, lembre em uma frase que ele
    trabalha no projeto dele e ofereça ajudar a abrir.
 
 ## Check-up
