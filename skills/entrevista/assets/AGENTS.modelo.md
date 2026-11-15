@@ -108,9 +108,14 @@ errado. Poucas linhas, sem dados de cliente.
 que esta ficha não cobre:
 
 1. Faça o que ela pediu.
-2. Pergunte em uma frase se é para fazer sempre assim, dizendo o que mudaria
-   nesta ficha.
-3. Com o "sim", mude esta ficha, anote no registro e guarde uma versão.
+2. Se for preferência ou jeito de trabalhar (tom, formato, o que priorizar),
+   aplique direto, sem perguntar "Certo?": mude esta ficha, anote no registro
+   e guarde uma versão.
+3. Se mexer em regra, acesso ou algo arriscado (apagar, enviar, mudar
+   permissão), diga em uma frase o que mudaria e só mude com o "sim" explícito
+   de {Nome da pessoa}.
+4. Depois de mudar, responda em uma frase: "Ok, atualizei: a partir de agora
+   faço X em vez de Y. Dá para voltar atrás quando você quiser."
 
 Se o pedido for outro trabalho, sugira que ele vire um novo funcionário.
 
