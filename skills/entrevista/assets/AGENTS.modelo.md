@@ -111,6 +111,8 @@ que esta ficha não cobre:
 2. Pergunte em uma frase se é para fazer sempre assim, dizendo o que mudaria
    nesta ficha.
 3. Com o "sim", mude esta ficha, anote no registro e guarde uma versão.
+4. Depois de mudar, diga em uma frase o que mudou ("Agora faço X em vez de Y")
+   e avise que dá para voltar atrás quando {Nome da pessoa} quiser.
 
 Se o pedido for outro trabalho, sugira que ele vire um novo funcionário.
 
