@@ -17,8 +17,47 @@ Claude, sem programar.
 Abra o app do Claude no computador, vá na aba **Code**, abra a sua pasta
 **Funcionários** e cole a mensagem que está na descrição da aula 03.
 
-O Claude baixa este repositório e copia as duas skills para a sua pasta de
-skills (a pasta `.claude/skills` dentro da sua pasta de usuário, no Mac e no Windows), para valerem em qualquer projeto.
+As skills chegam como um **plugin** do Claude Code, com atualização
+automática: quando o curso atualiza este repositório, o Claude do aluno baixa
+a versão nova sozinho (alguns minutos depois de abrir uma conversa) e ela vale
+a partir da conversa seguinte. Ninguém precisa reinstalar.
+
+O que a mensagem da aula 03 faz, por trás:
+
+1. Acrescenta em `~/.claude/settings.json` (sem apagar o que já existe):
+
+   ```json
+   {
+     "extraKnownMarketplaces": {
+       "agente01": {
+         "source": { "source": "github", "repo": "oldaque/agente01" },
+         "autoUpdate": true
+       }
+     },
+     "enabledPlugins": { "agente01@agente01": true }
+   }
+   ```
+
+2. Se existirem cópias antigas em `~/.claude/skills/entrevista` ou
+   `~/.claude/skills/agente-00` (instalação de antes do plugin), apaga essas
+   duas pastas, para não ficar skill duplicada.
+3. Pede para começar uma conversa nova, onde o plugin já aparece.
+
+Quem tem o terminal pode fazer o mesmo com:
+
+```bash
+claude plugin marketplace add oldaque/agente01
+claude plugin install agente01@agente01
+```
+
+e ligar a atualização automática em `/plugin` → **Marketplaces** →
+`agente01` → **Enable auto-update**.
+
+### Publicar uma versão nova
+
+O plugin não tem número de versão de propósito: a versão é o commit. Todo
+merge na `main` vira atualização para todos os alunos. Por isso, nada entra
+na `main` sem revisão.
 
 ## Como fica a sua pasta Funcionários
 
