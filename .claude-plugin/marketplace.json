@@ -1,0 +1,12 @@
+{
+  "name": "agente01",
+  "owner": { "name": "Rios Soluções em Tecnologia", "email": "contato@oldaque.com" },
+  "metadata": { "description": "Skills do curso Agente 01, com atualização automática." },
+  "plugins": [
+    {
+      "name": "agente01",
+      "source": "./",
+      "description": "Entrevista (contrata funcionários de IA) e Agente 00 (check-up dos funcionários)."
+    }
+  ]
+}
