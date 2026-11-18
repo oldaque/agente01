@@ -1,5 +1,6 @@
 {
   "name": "agente01",
+  "version": "1.0.0",
   "description": "Curso Agente 01: contrata funcionários de IA no Claude (entrevista) e acompanha eles (Agente 00).",
   "author": {
     "name": "Rios Soluções em Tecnologia",
