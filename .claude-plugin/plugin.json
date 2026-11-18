@@ -1,7 +1,18 @@
 {
   "name": "agente01",
   "description": "Curso Agente 01: contrata funcionários de IA no Claude (entrevista) e acompanha eles (Agente 00).",
-  "author": { "name": "Rios Soluções em Tecnologia", "email": "contato@oldaque.com" },
+  "author": {
+    "name": "Rios Soluções em Tecnologia",
+    "email": "contato@oldaque.com"
+  },
   "homepage": "https://github.com/oldaque/agente01",
-  "license": "SEE LICENSE IN LICENSE"
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": "https://github.com/oldaque/agente01",
+  "keywords": [
+    "agente01",
+    "funcionarios-de-ia",
+    "entrevista",
+    "agente-00",
+    "curso"
+  ]
 }
