@@ -1,0 +1,49 @@
+name: Versão
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  versao:
+    name: Versão e CHANGELOG
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Confere versão e CHANGELOG
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+        run: |
+          set -euo pipefail
+
+          # Só conta mudança no que chega ao aluno.
+          changed=$(git diff --name-only "$BASE" HEAD -- skills .claude-plugin assets)
+          if [ -z "$changed" ]; then
+            echo "Nada do plugin mudou. Não precisa subir a versão."
+            exit 0
+          fi
+
+          old=$(git show "$BASE:.claude-plugin/plugin.json" | jq -r '.version // "0.0.0"')
+          new=$(jq -r '.version // empty' .claude-plugin/plugin.json)
+
+          if [ -z "$new" ]; then
+            echo "::error file=.claude-plugin/plugin.json::Falta o campo version."
+            exit 1
+          fi
+          if ! [[ "$new" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error file=.claude-plugin/plugin.json::Versão $new fora do formato X.Y.Z."
+            exit 1
+          fi
+          if [ "$(printf '%s\n%s\n' "$old" "$new" | sort -V | tail -1)" != "$new" ] || [ "$old" = "$new" ]; then
+            echo "::error file=.claude-plugin/plugin.json::O plugin mudou, mas a versão não subiu ($old → $new). Sem versão nova, os alunos não recebem a atualização."
+            exit 1
+          fi
+          if ! grep -q "^## \[$new\]" CHANGELOG.md; then
+            echo "::error file=CHANGELOG.md::Falta a seção ## [$new] no CHANGELOG."
+            exit 1
+          fi
+
+          echo "Versão $old → $new, com CHANGELOG. Tudo certo."

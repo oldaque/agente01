@@ -1,16 +1,30 @@
-# Agente 01
+<p align="center">
+  <img src="assets/logo.svg" width="112" height="112" alt="Agente 01">
+</p>
+
+<h1 align="center">Agente 01</h1>
+
+<p align="center">
+  Contrate o seu primeiro funcionário de IA no Claude, sem programar.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Claude_Code-plugin-12ad8e?style=flat-square" alt="Plugin do Claude Code">
+  <img src="https://img.shields.io/badge/vers%C3%A3o-1.0.0-12ad8e?style=flat-square" alt="Versão 1.0.0">
+  <img src="https://img.shields.io/badge/atualiza%C3%A7%C3%A3o-autom%C3%A1tica-12ad8e?style=flat-square" alt="Atualização automática">
+  <img src="https://img.shields.io/badge/licen%C3%A7a-propriet%C3%A1ria-2d2a20?style=flat-square" alt="Licença proprietária">
+</p>
 
 > **Material proprietário, uso exclusivo dos alunos do curso.** Proibido uso
 > comercial, cópia, fork público e redistribuição. Veja [LICENSE](LICENSE).
 > © 2026 Rios Soluções em Tecnologia.
 
-Skills do curso **Agente 01**: contrate o seu primeiro funcionário de IA no
-Claude, sem programar.
+Skills do curso **Agente 01**.
 
-| Skill | O que faz |
-|---|---|
-| [`entrevista`](skills/entrevista/) | Contrata um funcionário: entrevista você sobre o trabalho, prepara tudo sozinha e cria o funcionário como um projeto próprio, na sua pasta Funcionários. Na primeira vez, prepara o computador e cria o Agente 00. |
-| [`agente-00`](skills/agente-00/) | O check-up do Agente 00, o gerente que acompanha os seus funcionários e sugere melhorias. Nada muda sem você aprovar. |
+| | Skill | O que faz |
+|---|---|---|
+| <img src="assets/logo.svg" width="32" alt=""> | [`entrevista`](skills/entrevista/) | Contrata um funcionário: entrevista você sobre o trabalho, prepara tudo sozinha e cria o funcionário como um projeto próprio, na sua pasta Funcionários. Na primeira vez, prepara o computador e cria o Agente 00. |
+| <img src="assets/agente-00.svg" width="32" alt=""> | [`agente-00`](skills/agente-00/) | O check-up do Agente 00, o gerente que acompanha os seus funcionários e sugere melhorias. Nada muda sem você aprovar. |
 
 ## Como instalar
 
@@ -55,9 +69,28 @@ e ligar a atualização automática em `/plugin` → **Marketplaces** →
 
 ### Publicar uma versão nova
 
-O plugin não tem número de versão de propósito: a versão é o commit. Todo
-merge na `main` vira atualização para todos os alunos. Por isso, nada entra
-na `main` sem revisão.
+A versão do plugin fica em [`.claude-plugin/plugin.json`](.claude-plugin/plugin.json)
+(campo `version`, no formato [SemVer](https://semver.org/lang/pt-BR/)). O
+Claude do aluno só baixa a atualização quando esse número muda: mudar as
+skills sem subir a versão **não chega** a ninguém.
+
+Para publicar:
+
+1. Faça a mudança num branch e abra um PR.
+2. No mesmo PR, suba a `version` no `plugin.json`:
+   - **patch** (`1.0.0` → `1.0.1`): correção de texto ou de comportamento;
+   - **minor** (`1.0.0` → `1.1.0`): coisa nova que não muda o que já existe;
+   - **major** (`1.0.0` → `2.0.0`): muda o jeito de usar ou a pasta dos alunos.
+3. Escreva o que mudou no [`CHANGELOG.md`](CHANGELOG.md), na versão nova.
+4. Depois do merge na `main`, marque a versão com uma tag:
+
+   ```bash
+   git tag v1.0.1 && git push origin v1.0.1
+   ```
+
+O CI recusa o PR que muda o plugin sem subir a versão ou sem entrada no
+CHANGELOG. Como todo merge na `main` com versão nova vira atualização para
+todos os alunos, nada entra na `main` sem revisão.
 
 ## Como fica a sua pasta Funcionários
 
